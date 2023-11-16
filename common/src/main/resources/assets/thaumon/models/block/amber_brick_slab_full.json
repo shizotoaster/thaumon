@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "thaumon:block/amber_bricks",
+    "top": "thaumon:block/amber_bricks",
+    "side": "thaumon:block/amber_bricks"
+  },
+  "render_type": "solid"
+}

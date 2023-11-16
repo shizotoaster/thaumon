@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "grimoire",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:grimoire"
+    },
+    {
+      "item": "thaumon:grimoire"
+    },
+    {
+      "item": "thaumon:grimoire"
+    }
+  ],
+  "result": {
+    "item": "thaumon:grimoire_stack",
+    "count": 1
+  }
+}

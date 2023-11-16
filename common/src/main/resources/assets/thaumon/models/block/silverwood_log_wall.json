@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "thaumon:block/silverwood_log",
+    "particle": "thaumon:block/silverwood_log"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "thaumon:block/smooth_ancient_stone",
+    "top": "thaumon:block/smooth_ancient_stone",
+    "side": "thaumon:block/smooth_ancient_stone"
+  },
+  "render_type": "solid"
+}

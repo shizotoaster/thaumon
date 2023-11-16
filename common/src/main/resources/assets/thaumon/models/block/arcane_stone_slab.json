@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "thaumon:block/arcane_stone",
+    "top": "thaumon:block/arcane_stone",
+    "side": "thaumon:block/arcane_stone"
+  },
+  "render_type": "solid"
+}

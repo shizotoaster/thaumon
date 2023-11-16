@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "greatwood",
+  "category": "misc",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "thaumon:greatwood_planks"
+    },
+    "1": {
+      "item": "thaumon:greatwood_planks"
+    },
+    "2": {
+      "item": "thaumon:greatwood_planks"
+    },
+    "3": {
+      "item": "minecraft:book"
+    },
+    "4": {
+      "item": "minecraft:book"
+    },
+    "5": {
+      "item": "minecraft:book"
+    },
+    "6": {
+      "item": "thaumon:greatwood_planks"
+    },
+    "7": {
+      "item": "thaumon:greatwood_planks"
+    },
+    "8": {
+      "item": "thaumon:greatwood_planks"
+    }
+  },
+  "result": {
+    "item": "thaumon:greatwood_bookshelf",
+    "count": 1
+  }
+}

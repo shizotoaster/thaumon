@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "greatwood",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:greatwood_log"
+    }
+  ],
+  "result": {
+    "item": "thaumon:greatwood_planks",
+    "count": 4
+  }
+}

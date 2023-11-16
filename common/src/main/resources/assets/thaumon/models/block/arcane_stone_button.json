@@ -1,0 +1,7 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "thaumon:block/arcane_stone"
+  },
+  "render_type": "solid"
+}

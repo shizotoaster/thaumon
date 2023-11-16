@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "thaumon:block/greatwood_planks",
+    "top": "thaumon:block/greatwood_planks",
+    "side": "thaumon:block/greatwood_planks"
+  },
+  "render_type": "solid"
+}

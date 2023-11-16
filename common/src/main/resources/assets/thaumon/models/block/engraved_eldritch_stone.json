@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/engraved_eldritch_stone",
+    "up": "thaumon:block/engraved_eldritch_stone",
+    "north": "thaumon:block/engraved_eldritch_stone",
+    "east": "thaumon:block/engraved_eldritch_stone",
+    "south": "thaumon:block/engraved_eldritch_stone",
+    "west": "thaumon:block/engraved_eldritch_stone",
+    "particle": "thaumon:block/engraved_eldritch_stone"
+  },
+  "render_type": "solid"
+}

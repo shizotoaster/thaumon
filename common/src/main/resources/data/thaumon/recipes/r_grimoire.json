@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "grimoire",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:mutagen"
+    },
+    {
+      "item": "minecraft:book"
+    }
+  ],
+  "result": {
+    "item": "thaumon:grimoire",
+    "count": 1
+  }
+}

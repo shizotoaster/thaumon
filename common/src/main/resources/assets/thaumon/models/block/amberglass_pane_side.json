@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_glass_pane_side",
+  "textures": {
+    "edge": "thaumon:block/amberglass",
+    "pane": "thaumon:block/amberglass"
+  },
+  "render_type": "translucent"
+}

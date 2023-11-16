@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ancientstone",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:polished_ancient_stone"
+    },
+    {
+      "item": "thaumon:polished_ancient_stone"
+    },
+    {
+      "item": "thaumon:polished_ancient_stone"
+    },
+    {
+      "item": "thaumon:polished_ancient_stone"
+    },
+    {
+      "item": "thaumon:polished_ancient_stone"
+    },
+    {
+      "item": "thaumon:polished_ancient_stone"
+    }
+  ],
+  "result": {
+    "item": "thaumon:polished_ancient_stone_stairs",
+    "count": 4
+  }
+}

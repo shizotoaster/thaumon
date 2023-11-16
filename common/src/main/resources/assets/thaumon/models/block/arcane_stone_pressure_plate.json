@@ -1,0 +1,7 @@
+{
+  "parent": "block/pressure_plate_up",
+  "textures": {
+    "texture": "thaumon:block/arcane_stone"
+  },
+  "render_type": "solid"
+}

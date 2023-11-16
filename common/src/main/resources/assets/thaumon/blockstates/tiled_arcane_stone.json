@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "thaumon:block/tiled_arcane_stone"
+    }
+  }
+}

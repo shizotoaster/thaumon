@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thaumon:block/greatwood_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thaumon:block/greatwood_log"
+    },
+    "axis=z": {
+      "model": "thaumon:block/greatwood_log",
+      "x": 90
+    }
+  }
+}

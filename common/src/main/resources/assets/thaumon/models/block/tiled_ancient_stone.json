@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/tiled_ancient_stone",
+    "up": "thaumon:block/tiled_ancient_stone",
+    "north": "thaumon:block/tiled_ancient_stone",
+    "east": "thaumon:block/tiled_ancient_stone",
+    "south": "thaumon:block/tiled_ancient_stone",
+    "west": "thaumon:block/tiled_ancient_stone",
+    "particle": "thaumon:block/tiled_ancient_stone"
+  },
+  "render_type": "solid"
+}

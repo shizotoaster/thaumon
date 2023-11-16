@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "silverwood",
+  "category": "misc",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "thaumon:silverwood_planks"
+    },
+    "3": {
+      "item": "thaumon:silverwood_planks"
+    },
+    "4": {
+      "item": "minecraft:glass"
+    },
+    "5": {
+      "item": "thaumon:silverwood_planks"
+    },
+    "7": {
+      "item": "thaumon:silverwood_planks"
+    }
+  },
+  "result": {
+    "item": "thaumon:silverwood_window",
+    "count": 4
+  }
+}

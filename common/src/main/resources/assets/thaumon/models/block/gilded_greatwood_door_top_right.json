@@ -1,0 +1,8 @@
+{
+  "parent": "block/door_top_right",
+  "textures": {
+    "bottom": "thaumon:block/gilded_greatwood_door_bottom",
+    "top": "thaumon:block/gilded_greatwood_door_top"
+  },
+  "render_type": "cutout"
+}

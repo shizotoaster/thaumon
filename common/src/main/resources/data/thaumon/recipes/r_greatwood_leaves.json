@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "greatwood",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:mutagen"
+    },
+    {
+      "item": "minecraft:oak_leaves"
+    }
+  ],
+  "result": {
+    "item": "thaumon:greatwood_leaves",
+    "count": 1
+  }
+}

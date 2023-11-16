@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "thaumon:block/arcane_stone_bricks_alt",
+    "particle": "thaumon:block/arcane_stone_bricks_alt"
+  },
+  "render_type": "solid"
+}

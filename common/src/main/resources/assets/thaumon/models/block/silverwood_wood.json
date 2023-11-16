@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/silverwood_log",
+    "up": "thaumon:block/silverwood_log",
+    "north": "thaumon:block/silverwood_log",
+    "east": "thaumon:block/silverwood_log",
+    "south": "thaumon:block/silverwood_log",
+    "west": "thaumon:block/silverwood_log",
+    "particle": "thaumon:block/silverwood_log"
+  },
+  "render_type": "solid"
+}

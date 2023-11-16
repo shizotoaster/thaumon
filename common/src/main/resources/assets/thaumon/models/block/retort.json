@@ -1,0 +1,9 @@
+{
+  "parent": "thaumon:custom/retort",
+  "textures": {
+    "all": "thaumon:block/retort",
+    "particle": "thaumon:block/retort",
+    "0": "thaumon:block/retort"
+  },
+  "render_type": "cutout"
+}

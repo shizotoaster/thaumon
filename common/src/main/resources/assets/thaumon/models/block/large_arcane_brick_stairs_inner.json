@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "thaumon:block/arcane_stone_bricks_alt",
+    "top": "thaumon:block/arcane_stone_bricks_alt",
+    "side": "thaumon:block/arcane_stone_bricks_alt"
+  },
+  "render_type": "solid"
+}

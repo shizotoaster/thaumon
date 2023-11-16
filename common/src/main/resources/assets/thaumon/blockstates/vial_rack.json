@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thaumon:block/vial_rack"
+    },
+    "facing=east": {
+      "model": "thaumon:block/vial_rack",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "thaumon:block/vial_rack",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumon:block/vial_rack",
+      "y": 270
+    }
+  }
+}

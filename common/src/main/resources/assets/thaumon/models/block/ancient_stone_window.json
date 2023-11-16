@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/ancient_stone_window",
+    "up": "thaumon:block/ancient_stone_window",
+    "north": "thaumon:block/ancient_stone_window",
+    "east": "thaumon:block/ancient_stone_window",
+    "south": "thaumon:block/ancient_stone_window",
+    "west": "thaumon:block/ancient_stone_window",
+    "particle": "thaumon:block/ancient_stone_window"
+  },
+  "render_type": "cutout"
+}

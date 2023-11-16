@@ -1,0 +1,9 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "thaumon:block/eldritch_stone_tiles",
+    "top": "thaumon:block/eldritch_stone_tiles",
+    "side": "thaumon:block/eldritch_stone_tiles"
+  },
+  "render_type": "solid"
+}

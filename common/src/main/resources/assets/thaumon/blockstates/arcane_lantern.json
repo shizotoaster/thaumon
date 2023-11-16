@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thaumon:block/arcane_lantern",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thaumon:block/arcane_lantern"
+    },
+    "axis=z": {
+      "model": "thaumon:block/arcane_lantern",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "eldritchstone",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:eldritch_stone"
+    },
+    {
+      "item": "thaumon:mutagen"
+    }
+  ],
+  "result": {
+    "item": "thaumon:inlaid_eldritch_stone",
+    "count": 1
+  }
+}

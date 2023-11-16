@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/eldritch_stone_pillar_top",
+    "up": "thaumon:block/eldritch_stone_pillar_top",
+    "north": "thaumon:block/eldritch_stone_pillar",
+    "east": "thaumon:block/eldritch_stone_pillar",
+    "south": "thaumon:block/eldritch_stone_pillar",
+    "west": "thaumon:block/eldritch_stone_pillar",
+    "particle": "thaumon:block/eldritch_stone_pillar_top"
+  },
+  "render_type": "solid"
+}

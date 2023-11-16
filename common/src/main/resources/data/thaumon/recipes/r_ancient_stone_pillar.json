@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "group": "ancientstone",
+  "count": 1,
+  "ingredient": {
+    "item": "thaumon:ancient_stone"
+  },
+  "result": "thaumon:ancient_stone_pillar"
+}

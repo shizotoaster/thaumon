@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thaumon:block/grimoire"
+    },
+    "facing=east": {
+      "model": "thaumon:block/grimoire",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "thaumon:block/grimoire",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumon:block/grimoire",
+      "y": 270
+    }
+  }
+}

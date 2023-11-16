@@ -1,0 +1,7 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "thaumon:block/greatwood_planks"
+  },
+  "render_type": "solid"
+}

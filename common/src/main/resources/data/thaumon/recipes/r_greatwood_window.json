@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "greatwood",
+  "category": "misc",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "thaumon:greatwood_planks"
+    },
+    "3": {
+      "item": "thaumon:greatwood_planks"
+    },
+    "4": {
+      "item": "minecraft:glass"
+    },
+    "5": {
+      "item": "thaumon:greatwood_planks"
+    },
+    "7": {
+      "item": "thaumon:greatwood_planks"
+    }
+  },
+  "result": {
+    "item": "thaumon:greatwood_window",
+    "count": 4
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "silverwood",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:mutagen"
+    },
+    {
+      "item": "minecraft:birch_leaves"
+    }
+  ],
+  "result": {
+    "item": "thaumon:silverwood_leaves",
+    "count": 1
+  }
+}

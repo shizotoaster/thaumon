@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "thaumon:ancient_stone_button",
+    "thaumon:arcane_stone_button",
+    "thaumon:greatwood_button",
+    "thaumon:silverwood_button"
+  ]
+}

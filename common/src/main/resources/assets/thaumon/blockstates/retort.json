@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thaumon:block/retort"
+    },
+    "facing=east": {
+      "model": "thaumon:block/retort",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "thaumon:block/retort",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumon:block/retort",
+      "y": 270
+    }
+  }
+}

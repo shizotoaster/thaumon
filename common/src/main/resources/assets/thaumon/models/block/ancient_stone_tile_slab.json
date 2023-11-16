@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "thaumon:block/ancient_stone_tiles",
+    "top": "thaumon:block/ancient_stone_tiles",
+    "side": "thaumon:block/ancient_stone_tiles"
+  },
+  "render_type": "solid"
+}

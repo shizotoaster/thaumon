@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/arcane_stone_pillar_top",
+    "up": "thaumon:block/arcane_stone_pillar_top",
+    "north": "thaumon:block/arcane_stone_pillar",
+    "east": "thaumon:block/arcane_stone_pillar",
+    "south": "thaumon:block/arcane_stone_pillar",
+    "west": "thaumon:block/arcane_stone_pillar",
+    "particle": "thaumon:block/arcane_stone_pillar_top"
+  },
+  "render_type": "solid"
+}

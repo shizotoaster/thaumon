@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/chiseled_eldritch_stone_top",
+    "up": "thaumon:block/chiseled_eldritch_stone_top",
+    "north": "thaumon:block/chiseled_eldritch_stone",
+    "east": "thaumon:block/chiseled_eldritch_stone",
+    "south": "thaumon:block/chiseled_eldritch_stone",
+    "west": "thaumon:block/chiseled_eldritch_stone",
+    "particle": "thaumon:block/chiseled_eldritch_stone_top"
+  },
+  "render_type": "solid"
+}

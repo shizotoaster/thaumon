@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/arcane_stone_bricks",
+    "up": "thaumon:block/arcane_stone_bricks",
+    "north": "thaumon:block/arcane_stone_bricks",
+    "east": "thaumon:block/arcane_stone_bricks",
+    "south": "thaumon:block/arcane_stone_bricks",
+    "west": "thaumon:block/arcane_stone_bricks",
+    "particle": "thaumon:block/arcane_stone_bricks"
+  },
+  "render_type": "solid"
+}

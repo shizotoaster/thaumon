@@ -1,0 +1,30 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/shizotoaster/thaumon/issues"
+license = "MIT"
+
+[[mods]]
+modId = "thaumon"
+version = "${version}"
+displayName = "Thaumon [BETA]"
+authors = "jdlenl, shizotoaster"
+description = '''
+Thaumcraft-inspired decoration blocks for modern Minecraft
+'''
+logoFile = "thaumon_logo.png"
+displayURL = "https://github.com/shizotoaster/thaumon"
+logoBlur = false
+
+[[dependencies.thaumon]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.thaumon]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1, 1.20.2)"
+ordering = "NONE"
+side = "BOTH"

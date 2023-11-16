@@ -1,0 +1,7 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "thaumon:block/smooth_ancient_stone"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/silverwood_planks",
+    "up": "thaumon:block/silverwood_planks",
+    "north": "thaumon:block/silverwood_classic_bookshelf",
+    "east": "thaumon:block/silverwood_classic_bookshelf",
+    "south": "thaumon:block/silverwood_classic_bookshelf",
+    "west": "thaumon:block/silverwood_classic_bookshelf",
+    "particle": "thaumon:block/silverwood_planks"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thaumon:block/research_notes"
+    },
+    "facing=east": {
+      "model": "thaumon:block/research_notes",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "thaumon:block/research_notes",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumon:block/research_notes",
+      "y": 270
+    }
+  }
+}

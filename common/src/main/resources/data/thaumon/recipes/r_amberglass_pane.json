@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "amber",
+  "category": "misc",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "thaumon:amberglass"
+    },
+    "1": {
+      "item": "thaumon:amberglass"
+    },
+    "2": {
+      "item": "thaumon:amberglass"
+    },
+    "3": {
+      "item": "thaumon:amberglass"
+    },
+    "4": {
+      "item": "thaumon:amberglass"
+    },
+    "5": {
+      "item": "thaumon:amberglass"
+    }
+  },
+  "result": {
+    "item": "thaumon:amberglass_pane",
+    "count": 16
+  }
+}

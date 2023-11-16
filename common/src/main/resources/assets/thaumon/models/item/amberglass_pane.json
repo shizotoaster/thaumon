@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "thaumon:block/amberglass"
+  },
+  "render_type": "translucent"
+}

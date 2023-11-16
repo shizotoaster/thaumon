@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thaumon:block/ancient_stone_tile_slab"
+    },
+    "type=top": {
+      "model": "thaumon:block/ancient_stone_tile_slab_top"
+    },
+    "type=double": {
+      "model": "thaumon:block/ancient_stone_tile_slab_full"
+    }
+  }
+}

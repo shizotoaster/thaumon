@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "silverwood",
+  "category": "misc",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "thaumon:silverwood_log"
+    },
+    "1": {
+      "item": "thaumon:silverwood_log"
+    },
+    "2": {
+      "item": "thaumon:silverwood_log"
+    },
+    "3": {
+      "item": "thaumon:silverwood_log"
+    }
+  },
+  "result": {
+    "item": "thaumon:silverwood_wood",
+    "count": 3
+  }
+}

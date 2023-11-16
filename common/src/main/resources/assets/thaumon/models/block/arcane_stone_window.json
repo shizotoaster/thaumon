@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/arcane_window",
+    "up": "thaumon:block/arcane_window",
+    "north": "thaumon:block/arcane_window",
+    "east": "thaumon:block/arcane_window",
+    "south": "thaumon:block/arcane_window",
+    "west": "thaumon:block/arcane_window",
+    "particle": "thaumon:block/arcane_window"
+  },
+  "render_type": "cutout"
+}

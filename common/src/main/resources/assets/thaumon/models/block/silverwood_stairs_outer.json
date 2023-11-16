@@ -1,0 +1,9 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "thaumon:block/silverwood_planks",
+    "top": "thaumon:block/silverwood_planks",
+    "side": "thaumon:block/silverwood_planks"
+  },
+  "render_type": "solid"
+}

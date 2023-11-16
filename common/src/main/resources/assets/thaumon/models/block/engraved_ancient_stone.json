@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/embossed_ancient_stone",
+    "up": "thaumon:block/embossed_ancient_stone",
+    "north": "thaumon:block/embossed_ancient_stone",
+    "east": "thaumon:block/embossed_ancient_stone",
+    "south": "thaumon:block/embossed_ancient_stone",
+    "west": "thaumon:block/embossed_ancient_stone",
+    "particle": "thaumon:block/embossed_ancient_stone"
+  },
+  "render_type": "solid"
+}

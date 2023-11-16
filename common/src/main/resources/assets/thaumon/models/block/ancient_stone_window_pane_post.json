@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_glass_pane_post",
+  "textures": {
+    "edge": "thaumon:block/smooth_ancient_stone",
+    "pane": "thaumon:block/ancient_stone_window"
+  },
+  "render_type": "cutout"
+}

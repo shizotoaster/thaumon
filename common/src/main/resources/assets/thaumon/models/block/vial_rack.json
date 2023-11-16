@@ -1,0 +1,9 @@
+{
+  "parent": "thaumon:custom/vial_rack",
+  "textures": {
+    "all": "thaumon:block/vial_rack",
+    "particle": "thaumon:block/greatwood_planks",
+    "0": "thaumon:block/vial_rack"
+  },
+  "render_type": "solid"
+}

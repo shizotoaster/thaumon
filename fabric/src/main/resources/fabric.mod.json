@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "thaumon",
+  "version": "${version}",
+  "name": "Thaumon [BETA]",
+  "description": "Thaumcraft-inspired decoration blocks for modern Minecraft",
+  "authors": [
+    "jdlenl",
+    "shizotoaster"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/thaumon",
+    "sources": "https://github.com/shizotoaster/thaumon",
+    "issues": "https://github.com/shizotoaster/thaumon/issues"
+  },
+  "license": "MIT",
+  "icon": "thaumon_logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jdlenl.thaumon.fabric.ThaumonFabric"
+    ],
+    "client": [
+      "jdlenl.thaumon.client.fabric.ThaumonClientFabric"
+    ]
+  },
+  "mixins": [
+    "thaumon-fabric.mixins.json",
+    "thaumon-common.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*",
+    "minecraft": ">=1.20.1"
+  }
+}

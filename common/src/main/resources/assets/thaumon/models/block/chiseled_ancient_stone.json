@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/chiseled_ancient_stone_2",
+    "up": "thaumon:block/chiseled_ancient_stone_4",
+    "north": "thaumon:block/chiseled_ancient_stone_3",
+    "east": "thaumon:block/chiseled_ancient_stone_1",
+    "south": "thaumon:block/chiseled_ancient_stone_6",
+    "west": "thaumon:block/chiseled_ancient_stone_5",
+    "particle": "thaumon:block/chiseled_ancient_stone_2"
+  },
+  "render_type": "solid"
+}

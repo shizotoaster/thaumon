@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "thaumon:block/amber_top",
+    "top": "thaumon:block/amber_top",
+    "side": "thaumon:block/amber_side"
+  },
+  "render_type": "solid"
+}

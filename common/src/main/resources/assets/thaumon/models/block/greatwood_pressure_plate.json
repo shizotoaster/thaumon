@@ -1,0 +1,7 @@
+{
+  "parent": "block/pressure_plate_up",
+  "textures": {
+    "texture": "thaumon:block/greatwood_planks"
+  },
+  "render_type": "solid"
+}

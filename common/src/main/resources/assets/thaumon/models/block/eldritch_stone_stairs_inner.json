@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "thaumon:block/eldritch_stone",
+    "top": "thaumon:block/eldritch_stone",
+    "side": "thaumon:block/eldritch_stone"
+  },
+  "render_type": "solid"
+}

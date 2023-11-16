@@ -1,0 +1,9 @@
+{
+  "parent": "thaumon:custom/crystal_stand",
+  "textures": {
+    "all": "thaumon:block/crystal_stand",
+    "particle": "thaumon:block/crystal_stand",
+    "0": "thaumon:block/crystal_stand"
+  },
+  "render_type": "solid"
+}

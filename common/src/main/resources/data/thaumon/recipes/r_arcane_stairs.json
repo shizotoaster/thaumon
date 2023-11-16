@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "arcanestone",
+  "category": "misc",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "thaumon:arcane_stone"
+    },
+    "3": {
+      "item": "thaumon:arcane_stone"
+    },
+    "4": {
+      "item": "thaumon:arcane_stone"
+    },
+    "6": {
+      "item": "thaumon:arcane_stone"
+    },
+    "7": {
+      "item": "thaumon:arcane_stone"
+    },
+    "8": {
+      "item": "thaumon:arcane_stone"
+    }
+  },
+  "result": {
+    "item": "thaumon:arcane_stone_stairs",
+    "count": 4
+  }
+}

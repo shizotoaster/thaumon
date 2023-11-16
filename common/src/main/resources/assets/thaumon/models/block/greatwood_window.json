@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/greatwood_window",
+    "up": "thaumon:block/greatwood_window",
+    "north": "thaumon:block/greatwood_window",
+    "east": "thaumon:block/greatwood_window",
+    "south": "thaumon:block/greatwood_window",
+    "west": "thaumon:block/greatwood_window",
+    "particle": "thaumon:block/greatwood_window"
+  },
+  "render_type": "cutout"
+}

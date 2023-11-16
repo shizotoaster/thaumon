@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "group": "eldritchstone",
+  "count": 1,
+  "ingredient": {
+    "item": "thaumon:eldritch_stone"
+  },
+  "result": "thaumon:engraved_eldritch_stone"
+}

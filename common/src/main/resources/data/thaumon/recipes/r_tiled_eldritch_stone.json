@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "eldritchstone",
+  "category": "misc",
+  "pattern": [
+    " 1 ",
+    "3 5",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "thaumon:eldritch_stone_slab"
+    },
+    "3": {
+      "item": "thaumon:eldritch_stone_slab"
+    },
+    "5": {
+      "item": "thaumon:eldritch_stone_slab"
+    },
+    "7": {
+      "item": "thaumon:eldritch_stone_slab"
+    }
+  },
+  "result": {
+    "item": "thaumon:eldritch_stone_tiles",
+    "count": 2
+  }
+}

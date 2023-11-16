@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "amber",
+  "category": "misc",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "thaumon:amber"
+    },
+    "3": {
+      "item": "thaumon:amber"
+    },
+    "4": {
+      "item": "thaumon:amber"
+    },
+    "6": {
+      "item": "thaumon:amber"
+    },
+    "7": {
+      "item": "thaumon:amber"
+    },
+    "8": {
+      "item": "thaumon:amber"
+    }
+  },
+  "result": {
+    "item": "thaumon:amber_stairs",
+    "count": 4
+  }
+}

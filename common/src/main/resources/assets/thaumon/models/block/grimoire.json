@@ -1,0 +1,9 @@
+{
+  "parent": "thaumon:custom/grimoire",
+  "textures": {
+    "all": "thaumon:block/grimoire_model",
+    "particle": "thaumon:block/grimoire_model",
+    "0": "thaumon:block/grimoire_model"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thaumon:block/silverwood_slab"
+    },
+    "type=top": {
+      "model": "thaumon:block/silverwood_slab_top"
+    },
+    "type=double": {
+      "model": "thaumon:block/silverwood_slab_full"
+    }
+  }
+}

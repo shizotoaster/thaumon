@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_glass_pane_post",
+  "textures": {
+    "edge": "thaumon:block/eldritch_stone",
+    "pane": "thaumon:block/eldritch_window"
+  },
+  "render_type": "cutout"
+}

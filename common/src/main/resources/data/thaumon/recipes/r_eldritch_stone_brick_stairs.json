@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "eldritchstone",
+  "category": "misc",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "thaumon:eldritch_stone_bricks"
+    },
+    "3": {
+      "item": "thaumon:eldritch_stone_bricks"
+    },
+    "4": {
+      "item": "thaumon:eldritch_stone_bricks"
+    },
+    "6": {
+      "item": "thaumon:eldritch_stone_bricks"
+    },
+    "7": {
+      "item": "thaumon:eldritch_stone_bricks"
+    },
+    "8": {
+      "item": "thaumon:eldritch_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "thaumon:eldritch_stone_brick_stairs",
+    "count": 4
+  }
+}

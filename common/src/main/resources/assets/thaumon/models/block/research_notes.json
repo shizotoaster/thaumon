@@ -1,0 +1,9 @@
+{
+  "parent": "thaumon:custom/research_notes",
+  "textures": {
+    "all": "thaumon:block/research_notes",
+    "particle": "thaumon:block/research_notes",
+    "0": "thaumon:block/research_notes"
+  },
+  "render_type": "cutout"
+}

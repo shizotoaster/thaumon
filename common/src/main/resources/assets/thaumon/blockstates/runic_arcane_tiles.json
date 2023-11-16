@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thaumon:block/runic_arcane_tiles",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thaumon:block/runic_arcane_tiles"
+    },
+    "axis=z": {
+      "model": "thaumon:block/runic_arcane_tiles",
+      "x": 90
+    }
+  }
+}

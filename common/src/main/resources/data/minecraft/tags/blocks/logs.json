@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "thaumon:greatwood_wood",
+    "thaumon:silverwood_log_wall",
+    "thaumon:greatwood_log_post",
+    "thaumon:silverwood_log_post",
+    "thaumon:silverwood_log",
+    "thaumon:greatwood_log_wall",
+    "thaumon:greatwood_log",
+    "thaumon:silverwood_wood"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "arcanestone",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:arcane_stone"
+    },
+    {
+      "item": "thaumon:mutagen"
+    }
+  ],
+  "result": {
+    "item": "thaumon:inlaid_arcane_stone",
+    "count": 1
+  }
+}

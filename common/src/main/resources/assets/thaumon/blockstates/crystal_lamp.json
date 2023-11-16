@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thaumon:block/crystal_lamp"
+    },
+    "facing=east": {
+      "model": "thaumon:block/crystal_lamp",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "thaumon:block/crystal_lamp",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumon:block/crystal_lamp",
+      "y": 270
+    }
+  }
+}

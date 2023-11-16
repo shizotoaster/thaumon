@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "group": "amber",
+  "count": 1,
+  "ingredient": {
+    "item": "thaumon:amber"
+  },
+  "result": "thaumon:amber_stairs"
+}

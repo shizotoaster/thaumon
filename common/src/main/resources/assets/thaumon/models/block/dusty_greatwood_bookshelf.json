@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/greatwood_planks",
+    "up": "thaumon:block/greatwood_planks",
+    "north": "thaumon:block/greatwood_webbed_bookshelf",
+    "east": "thaumon:block/greatwood_webbed_bookshelf",
+    "south": "thaumon:block/greatwood_webbed_bookshelf",
+    "west": "thaumon:block/greatwood_webbed_bookshelf",
+    "particle": "thaumon:block/greatwood_planks"
+  },
+  "render_type": "solid"
+}

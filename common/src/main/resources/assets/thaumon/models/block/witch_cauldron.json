@@ -1,0 +1,12 @@
+{
+  "parent": "thaumon:custom/witch_cauldron",
+  "textures": {
+    "all": "thaumon:block/arcane_stone",
+    "particle": "thaumon:block/arcane_stone",
+    "0": "thaumon:block/inlaid_arcane_stone",
+    "1": "thaumon:block/arcane_stone",
+    "2": "thaumon:block/cauldron_liquid",
+    "missing": "thaumon:block/arcane_stone"
+  },
+  "render_type": "solid"
+}

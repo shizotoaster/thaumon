@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "thaumon:block/ancient_stone_tiles",
+    "top": "thaumon:block/ancient_stone_tiles",
+    "side": "thaumon:block/ancient_stone_tiles"
+  },
+  "render_type": "solid"
+}

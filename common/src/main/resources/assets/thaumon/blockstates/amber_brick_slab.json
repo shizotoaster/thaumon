@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thaumon:block/amber_brick_slab"
+    },
+    "type=top": {
+      "model": "thaumon:block/amber_brick_slab_top"
+    },
+    "type=double": {
+      "model": "thaumon:block/amber_brick_slab_full"
+    }
+  }
+}

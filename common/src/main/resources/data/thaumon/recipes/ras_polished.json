@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ancientstone",
+  "category": "misc",
+  "pattern": [
+    " 1 ",
+    "3 5",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "thaumon:ancient_stone_slab"
+    },
+    "3": {
+      "item": "thaumon:ancient_stone_slab"
+    },
+    "5": {
+      "item": "thaumon:ancient_stone_slab"
+    },
+    "7": {
+      "item": "thaumon:ancient_stone_slab"
+    }
+  },
+  "result": {
+    "item": "thaumon:polished_ancient_stone",
+    "count": 2
+  }
+}

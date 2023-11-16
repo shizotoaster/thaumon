@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "greatwood",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:mutagen"
+    },
+    {
+      "item": "thaumon:greatwood_bookshelf"
+    }
+  ],
+  "result": {
+    "item": "thaumon:classic_greatwood_bookshelf",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/amberglass",
+    "up": "thaumon:block/amberglass",
+    "north": "thaumon:block/amberglass",
+    "east": "thaumon:block/amberglass",
+    "south": "thaumon:block/amberglass",
+    "west": "thaumon:block/amberglass",
+    "particle": "thaumon:block/amberglass"
+  },
+  "render_type": "translucent"
+}

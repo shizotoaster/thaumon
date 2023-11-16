@@ -1,0 +1,9 @@
+{
+  "parent": "thaumon:custom/crystal_lamp",
+  "textures": {
+    "all": "thaumon:block/crystal_lamp",
+    "particle": "thaumon:block/crystal_lamp",
+    "0": "thaumon:block/crystal_lamp"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "thaumon:block/silverwood_leaves",
+    "particle": "thaumon:block/silverwood_leaves"
+  },
+  "render_type": "cutout_mipped"
+}

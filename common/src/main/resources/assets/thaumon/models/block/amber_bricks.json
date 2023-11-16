@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/amber_bricks",
+    "up": "thaumon:block/amber_bricks",
+    "north": "thaumon:block/amber_bricks",
+    "east": "thaumon:block/amber_bricks",
+    "south": "thaumon:block/amber_bricks",
+    "west": "thaumon:block/amber_bricks",
+    "particle": "thaumon:block/amber_bricks"
+  },
+  "render_type": "solid"
+}

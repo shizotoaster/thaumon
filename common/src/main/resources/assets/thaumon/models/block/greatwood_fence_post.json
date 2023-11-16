@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "thaumon:block/greatwood_planks",
+    "particle": "thaumon:block/greatwood_planks"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "silverwood",
+  "category": "misc",
+  "pattern": [
+    "012",
+    "   ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "thaumon:silverwood_planks"
+    },
+    "1": {
+      "item": "thaumon:silverwood_planks"
+    },
+    "2": {
+      "item": "thaumon:silverwood_planks"
+    },
+    "6": {
+      "item": "thaumon:silverwood_planks"
+    },
+    "7": {
+      "item": "thaumon:silverwood_planks"
+    },
+    "8": {
+      "item": "thaumon:silverwood_planks"
+    }
+  },
+  "result": {
+    "item": "thaumon:empty_silverwood_bookshelf",
+    "count": 1
+  }
+}

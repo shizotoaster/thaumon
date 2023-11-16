@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/eldritch_window",
+    "up": "thaumon:block/eldritch_window",
+    "north": "thaumon:block/eldritch_window",
+    "east": "thaumon:block/eldritch_window",
+    "south": "thaumon:block/eldritch_window",
+    "west": "thaumon:block/eldritch_window",
+    "particle": "thaumon:block/eldritch_window"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "arcanestone",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumon:arcane_stone"
+    }
+  ],
+  "result": {
+    "item": "thaumon:arcane_stone_button",
+    "count": 1
+  }
+}

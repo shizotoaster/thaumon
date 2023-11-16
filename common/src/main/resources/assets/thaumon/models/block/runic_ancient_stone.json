@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/ancient_stone_eye",
+    "up": "thaumon:block/ancient_stone_eye",
+    "north": "thaumon:block/ancient_stone_mouth",
+    "east": "thaumon:block/ancient_stone_sigil",
+    "south": "thaumon:block/ancient_stone_mouth",
+    "west": "thaumon:block/ancient_stone_sigil",
+    "particle": "thaumon:block/ancient_stone_eye"
+  },
+  "render_type": "solid"
+}

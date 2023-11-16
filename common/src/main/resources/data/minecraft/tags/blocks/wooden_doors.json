@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "thaumon:silverwood_door",
+    "thaumon:gilded_greatwood_door",
+    "thaumon:greatwood_door"
+  ]
+}

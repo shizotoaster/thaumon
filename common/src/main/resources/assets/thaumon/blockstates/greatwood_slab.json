@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thaumon:block/greatwood_slab"
+    },
+    "type=top": {
+      "model": "thaumon:block/greatwood_slab_top"
+    },
+    "type=double": {
+      "model": "thaumon:block/greatwood_slab_full"
+    }
+  }
+}

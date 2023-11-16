@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thaumon:block/eldritch_stone_facade",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thaumon:block/eldritch_stone_facade"
+    },
+    "axis=z": {
+      "model": "thaumon:block/eldritch_stone_facade",
+      "x": 90
+    }
+  }
+}

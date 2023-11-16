@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thaumon:block/inlaid_ancient_stone",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thaumon:block/inlaid_ancient_stone"
+    },
+    "axis=z": {
+      "model": "thaumon:block/inlaid_ancient_stone",
+      "x": 90
+    }
+  }
+}

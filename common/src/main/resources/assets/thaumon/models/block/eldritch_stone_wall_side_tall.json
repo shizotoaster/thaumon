@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_side_tall",
+  "textures": {
+    "wall": "thaumon:block/eldritch_stone",
+    "particle": "thaumon:block/eldritch_stone"
+  },
+  "render_type": "solid"
+}

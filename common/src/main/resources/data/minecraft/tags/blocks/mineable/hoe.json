@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "thaumon:amber",
+    "thaumon:amber_stairs",
+    "thaumon:amber_slab",
+    "thaumon:amber_bricks",
+    "thaumon:amber_brick_stairs",
+    "thaumon:amber_brick_slab",
+    "thaumon:amberglass",
+    "thaumon:amberglass_pane",
+    "thaumon:greatwood_leaves",
+    "thaumon:silverwood_leaves",
+    "thaumon:silverwood_leaf_wall",
+    "thaumon:silverwood_leaf_post"
+  ]
+}

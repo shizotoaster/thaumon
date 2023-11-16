@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thaumon:block/greatwood_log",
+    "up": "thaumon:block/greatwood_log",
+    "north": "thaumon:block/greatwood_log",
+    "east": "thaumon:block/greatwood_log",
+    "south": "thaumon:block/greatwood_log",
+    "west": "thaumon:block/greatwood_log",
+    "particle": "thaumon:block/greatwood_log"
+  },
+  "render_type": "solid"
+}

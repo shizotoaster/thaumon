@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ancientstone",
+  "category": "misc",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "thaumon:ancient_stone_tiles"
+    },
+    "3": {
+      "item": "thaumon:ancient_stone_tiles"
+    },
+    "4": {
+      "item": "thaumon:ancient_stone_tiles"
+    },
+    "6": {
+      "item": "thaumon:ancient_stone_tiles"
+    },
+    "7": {
+      "item": "thaumon:ancient_stone_tiles"
+    },
+    "8": {
+      "item": "thaumon:ancient_stone_tiles"
+    }
+  },
+  "result": {
+    "item": "thaumon:ancient_stone_tile_stairs",
+    "count": 4
+  }
+}

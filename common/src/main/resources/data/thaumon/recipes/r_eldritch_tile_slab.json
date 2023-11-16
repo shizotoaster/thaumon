@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "group": "eldritchstone",
+  "count": 2,
+  "ingredient": {
+    "item": "thaumon:eldritch_stone"
+  },
+  "result": "thaumon:eldritch_stone_tile_slab"
+}
