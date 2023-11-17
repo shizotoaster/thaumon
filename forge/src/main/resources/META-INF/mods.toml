@@ -8,6 +8,7 @@ modId = "thaumon"
 version = "${version}"
 displayName = "Thaumon [BETA]"
 authors = "jdlenl, shizotoaster"
+credits = "exelerium, unilock"
 description = '''
 Thaumcraft-inspired decoration blocks for modern Minecraft
 '''
