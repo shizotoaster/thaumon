@@ -1,5 +1,6 @@
 package jdlenl.thaumon.client.fabric;
 
+import jdlenl.thaumon.color.fabric.ColorProviderRegistries;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
@@ -9,26 +10,32 @@ import static jdlenl.thaumon.block.ThaumonBlocks.*;
 public class ThaumonClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(AMBERGLASS.get(), RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(AMBERGLASS_PANE.get(), RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
+                AMBERGLASS.get(),
+                AMBERGLASS_PANE.get()
+        );
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GREATWOOD_WINDOW.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GREATWOOD_WINDOW_PANE.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SILVERWOOD_WINDOW.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SILVERWOOD_WINDOW_PANE.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ARCANE_STONE_WINDOW.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ARCANE_STONE_WINDOW_PANE.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ELDRITCH_STONE_WINDOW.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ELDRITCH_STONE_WINDOW_PANE.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ANCIENT_STONE_WINDOW.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ANCIENT_STONE_WINDOW_PANE.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SILVERWOOD_DOOR.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ANCIENT_STONE_DOOR.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GREATWOOD_DOOR.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GILDED_GREATWOOD_DOOR.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SILVERWOOD_TRAPDOOR.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GREATWOOD_TRAPDOOR.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GILDED_GREATWOOD_TRAPDOOR.get(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RESEARCH_NOTES.get(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+                GREATWOOD_WINDOW.get(),
+                GREATWOOD_WINDOW_PANE.get(),
+                SILVERWOOD_WINDOW.get(),
+                SILVERWOOD_WINDOW_PANE.get(),
+                ARCANE_STONE_WINDOW.get(),
+                ARCANE_STONE_WINDOW_PANE.get(),
+                ELDRITCH_STONE_WINDOW.get(),
+                ELDRITCH_STONE_WINDOW_PANE.get(),
+                ANCIENT_STONE_WINDOW.get(),
+                ANCIENT_STONE_WINDOW_PANE.get(),
+                SILVERWOOD_DOOR.get(),
+                ANCIENT_STONE_DOOR.get(),
+                GREATWOOD_DOOR.get(),
+                GILDED_GREATWOOD_DOOR.get(),
+                SILVERWOOD_TRAPDOOR.get(),
+                GREATWOOD_TRAPDOOR.get(),
+                GILDED_GREATWOOD_TRAPDOOR.get(),
+                RESEARCH_NOTES.get()
+        );
+
+        ColorProviderRegistries.init();
     }
 }
