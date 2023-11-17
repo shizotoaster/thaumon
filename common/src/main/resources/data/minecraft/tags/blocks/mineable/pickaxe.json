@@ -23,7 +23,6 @@
     "thaumon:arcane_stone_pillar",
     "thaumon:runic_arcane_stone",
     "thaumon:tiled_arcane_stone",
-    "thaumon:runic_arcane_tiles",
     "thaumon:inlaid_arcane_stone",
     "thaumon:arcane_lantern",
     "thaumon:arcane_stone_window",
@@ -77,7 +76,6 @@
     "thaumon:arcane_stone_button",
     "thaumon:ancient_stone_button",
     "thaumon:arcane_stone_pressure_plate",
-    "thaumon:ancient_stone_pressure_plate",
-    "thaumon:witch_cauldron"
+    "thaumon:ancient_stone_pressure_plate"
   ]
 }
