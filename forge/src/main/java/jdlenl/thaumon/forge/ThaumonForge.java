@@ -5,6 +5,9 @@ import jdlenl.thaumon.block.forge.ThaumonBlocksImpl;
 import jdlenl.thaumon.color.forge.ColorRegistrationHandlers;
 import jdlenl.thaumon.item.forge.ThaumonItemsImpl;
 import jdlenl.thaumon.itemgroup.forge.ThaumonItemGroupForge;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -19,8 +22,5 @@ public class ThaumonForge {
         ThaumonItemGroupForge.ITEM_GROUPS.register(eventBus);
         ThaumonBlocksImpl.BLOCKS.register(eventBus);
         ThaumonItemsImpl.ITEMS.register(eventBus);
-
-        eventBus.addListener(ColorRegistrationHandlers::onBlockColorHandlerRegistration);
-        eventBus.addListener(ColorRegistrationHandlers::onItemColorHandlerRegistration);
     }
 }

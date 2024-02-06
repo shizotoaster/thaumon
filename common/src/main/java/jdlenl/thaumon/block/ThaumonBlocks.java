@@ -77,6 +77,7 @@ public class ThaumonBlocks {
     public static Supplier<Block> ARCANE_TILE_SLAB;
     public static Supplier<Block> ARCANE_STONE_PILLAR;
     public static Supplier<Block> RUNIC_ARCANE_STONE;
+    public static Supplier<Block> RUNIC_ARCANE_TILES;
     public static Supplier<Block> TILED_ARCANE_STONE;
     public static Supplier<Block> INLAID_ARCANE_STONE;
     public static Supplier<Block> ARCANE_LANTERN;
@@ -436,6 +437,8 @@ public class ThaumonBlocks {
         ARCANE_STONE_PILLAR = registerBlock("arcane_stone_pillar", () -> new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 10.0F).requiresTool()));
 
         RUNIC_ARCANE_STONE = registerBlock("runic_arcane_stone", () -> new ThaumonFacingBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool()));
+
+        RUNIC_ARCANE_TILES = registerBlock("runic_arcane_tiles", () -> new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool()));
 
         TILED_ARCANE_STONE = registerBlock("tiled_arcane_stone", () -> new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool()));
 

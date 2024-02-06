@@ -1,0 +1,25 @@
+package jdlenl.thaumon.datagen.fabric;
+
+import jdlenl.thaumon.block.ThaumonBlocks;
+import jdlenl.thaumon.item.ThaumonItems;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.recipe.book.RecipeCategory;
+
+import java.util.function.Consumer;
+
+public class ThaumonRecipeProvider extends FabricRecipeProvider {
+    public ThaumonRecipeProvider(FabricDataOutput output) {
+        super(output);
+    }
+
+    @Override
+    public void generate(Consumer<RecipeJsonProvider> exporter) {
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ThaumonItems.MUTAGEN.get(), Blocks.AMETHYST_BLOCK.asItem());
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ThaumonBlocks.AMBER.get().asItem())
+                .input(ThaumonItems.MUTAGEN.get()).input(Blocks.SHROOMLIGHT).offerTo(exporter);
+    }
+}

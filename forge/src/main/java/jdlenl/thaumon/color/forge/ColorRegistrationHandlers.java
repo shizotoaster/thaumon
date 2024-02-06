@@ -1,5 +1,6 @@
 package jdlenl.thaumon.color.forge;
 
+import jdlenl.thaumon.Thaumon;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
@@ -8,12 +9,15 @@ import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockRenderView;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 import static jdlenl.thaumon.block.ThaumonBlocks.GREATWOOD_LEAVES;
 
+@Mod.EventBusSubscriber(modid = Thaumon.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ColorRegistrationHandlers {
     @SubscribeEvent
     public static void onBlockColorHandlerRegistration(RegisterColorHandlersEvent.Block event) {

@@ -6,7 +6,9 @@
   "description": "Thaumcraft-inspired decoration blocks for modern Minecraft",
   "authors": [
     "jdlenl",
-    "shizotoaster"
+    "shizotoaster",
+    "nageih",
+    "isengrimus"
   ],
   "contributors": [
     "exelerium",
@@ -26,6 +28,9 @@
     ],
     "client": [
       "jdlenl.thaumon.client.fabric.ThaumonClientFabric"
+    ],
+    "fabric-datagen": [
+      "jdlenl.thaumon.datagen.fabric.DataGenerators"
     ]
   },
   "mixins": [

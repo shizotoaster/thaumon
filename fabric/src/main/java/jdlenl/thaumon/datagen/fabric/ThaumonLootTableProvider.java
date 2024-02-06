@@ -1,21 +1,16 @@
-package jdlenl.thaumon.forge.datagen;
+package jdlenl.thaumon.datagen.fabric;
 
 import jdlenl.thaumon.block.ThaumonBlocks;
-import jdlenl.thaumon.block.forge.ThaumonBlocksImpl;
-import net.minecraft.block.Block;
-import net.minecraft.data.server.loottable.BlockLootTableGenerator;
-import net.minecraft.resource.featuretoggle.FeatureFlags;
-import net.minecraftforge.registries.RegistryObject;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
-import java.util.Set;
-
-public class ThaumonBlockLootTables extends BlockLootTableGenerator {
-    protected ThaumonBlockLootTables() {
-        super(Set.of(), FeatureFlags.FEATURE_MANAGER.getFeatureSet());
+public class ThaumonLootTableProvider extends FabricBlockLootTableProvider {
+    public ThaumonLootTableProvider(FabricDataOutput output) {
+        super(output);
     }
 
     @Override
-    protected void generate() {
+    public void generate() {
         this.addDrop(ThaumonBlocks.AMBER.get());
         this.addDrop(ThaumonBlocks.AMBER_STAIRS.get());
         this.addDrop(ThaumonBlocks.AMBER_SLAB.get());
@@ -152,10 +147,5 @@ public class ThaumonBlockLootTables extends BlockLootTableGenerator {
         this.addDrop(ThaumonBlocks.CRYSTAL_STAND.get());
         this.addDrop(ThaumonBlocks.TILED_ARCANE_STONE.get());
         this.addDrop(ThaumonBlocks.RUNIC_ARCANE_TILES.get());
-    }
-
-    @Override
-    protected Iterable<Block> getKnownBlocks() {
-        return ThaumonBlocksImpl.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 }
