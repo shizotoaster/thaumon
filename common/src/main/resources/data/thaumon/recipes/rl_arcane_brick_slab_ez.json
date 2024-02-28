@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "group": "arcanestone",
-  "count": 2,
-  "ingredient": {
-    "item": "thaumon:large_arcane_stone_bricks"
-  },
-  "result": "thaumon:large_arcane_brick_slab"
-}

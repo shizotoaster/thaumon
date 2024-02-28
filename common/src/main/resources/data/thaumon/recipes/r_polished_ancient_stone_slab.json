@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "group": "ancientstone",
-  "count": 2,
-  "ingredient": {
-    "item": "thaumon:ancient_stone"
-  },
-  "result": "thaumon:polished_ancient_stone_slab"
-}

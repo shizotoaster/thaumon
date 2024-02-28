@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "group": "ancientstone",
-  "count": 2,
-  "ingredient": {
-    "item": "thaumon:ancient_stone_tiles"
-  },
-  "result": "thaumon:ancient_stone_tile_slab"
-}

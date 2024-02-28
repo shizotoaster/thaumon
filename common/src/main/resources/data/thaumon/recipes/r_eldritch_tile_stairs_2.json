@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "group": "eldritchstone",
-  "count": 1,
-  "ingredient": {
-    "item": "thaumon:eldritch_stone_tiles"
-  },
-  "result": "thaumon:eldritch_stone_tile_stairs"
-}

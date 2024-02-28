@@ -1,27 +1,28 @@
-package jdlenl.thaumon.datagen.fabric;
+package jdlenl.thaumon.datagen.forge;
 
 import jdlenl.thaumon.Thaumon;
 import jdlenl.thaumon.block.ThaumonBlocks;
 import jdlenl.thaumon.item.ThaumonItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.DataOutput;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
+import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
 
-public class ThaumonRecipeProvider extends FabricRecipeProvider {
-    public ThaumonRecipeProvider(FabricDataOutput output) {
+public class ThaumonRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    public ThaumonRecipeProvider(DataOutput output) {
         super(output);
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    protected void generate(Consumer<RecipeJsonProvider> exporter) {
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ThaumonItems.MUTAGEN.get(), Blocks.AMETHYST_BLOCK);
 
         // Amber
