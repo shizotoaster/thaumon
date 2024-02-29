@@ -2,6 +2,7 @@ package jdlenl.thaumon.block;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import jdlenl.thaumon.block.blocks.*;
+import jdlenl.thaumon.block.blocks.mojangLovesBreakingThings.*;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
@@ -236,7 +237,7 @@ public class ThaumonBlocks {
                 }
         ).dynamicBounds()));
 
-        AMBERGLASS = registerBlock("amberglass", () -> new GlassBlock(AbstractBlock.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.SHROOMLIGHT).strength(1.0F).luminance(
+        AMBERGLASS = registerBlock("amberglass", () -> new ThaumonTransparentBlock(AbstractBlock.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.SHROOMLIGHT).strength(1.0F).luminance(
                 (state) -> {
                     return 5;
                 }
@@ -286,35 +287,35 @@ public class ThaumonBlocks {
 
         GREATWOOD_SLAB = registerBlock("greatwood_slab", () -> new SlabBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F)));
 
-        GREATWOOD_DOOR = registerBlock("greatwood_door", () -> new DoorBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
+        GREATWOOD_DOOR = registerBlock("greatwood_door", () -> new ThaumonDoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
-        ).dynamicBounds(), BlockSetType.OAK));
+        ).dynamicBounds()));
 
-        GREATWOOD_TRAPDOOR = registerBlock("greatwood_trapdoor", () -> new TrapdoorBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
+        GREATWOOD_TRAPDOOR = registerBlock("greatwood_trapdoor", () -> new ThaumonTrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
-        ).dynamicBounds(), BlockSetType.OAK));
+        ).dynamicBounds()));
 
-        GILDED_GREATWOOD_DOOR = registerBlock("gilded_greatwood_door", () -> new DoorBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
+        GILDED_GREATWOOD_DOOR = registerBlock("gilded_greatwood_door", () -> new ThaumonDoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
-        ).dynamicBounds(), BlockSetType.OAK));
+        ).dynamicBounds()));
 
-        GILDED_GREATWOOD_TRAPDOOR = registerBlock("gilded_greatwood_trapdoor", () -> new TrapdoorBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
+        GILDED_GREATWOOD_TRAPDOOR = registerBlock("gilded_greatwood_trapdoor", () -> new ThaumonTrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
-        ).dynamicBounds(), BlockSetType.OAK));
+        ).dynamicBounds()));
 
         GREATWOOD_FENCE = registerBlock("greatwood_fence", () -> new FenceBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid()));
 
-        GREATWOOD_FENCE_GATE = registerBlock("greatwood_fence_gate", () -> new FenceGateBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid(), WoodType.OAK));
+        GREATWOOD_FENCE_GATE = registerBlock("greatwood_fence_gate", () -> new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid()));
 
-        GREATWOOD_WINDOW = registerBlock("greatwood_window", () -> new GlassBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
+        GREATWOOD_WINDOW = registerBlock("greatwood_window", () -> new ThaumonTransparentBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_DULL_PINK).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
@@ -358,21 +359,21 @@ public class ThaumonBlocks {
 
         SILVERWOOD_SLAB = registerBlock("silverwood_slab", () -> new SlabBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F)));
 
-        SILVERWOOD_DOOR = registerBlock("silverwood_door", () -> new DoorBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
+        SILVERWOOD_DOOR = registerBlock("silverwood_door", () -> new ThaumonDoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
-        ).dynamicBounds(), BlockSetType.OAK));
+        ).dynamicBounds()));
 
-        SILVERWOOD_TRAPDOOR = registerBlock("silverwood_trapdoor", () -> new TrapdoorBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
+        SILVERWOOD_TRAPDOOR = registerBlock("silverwood_trapdoor", () -> new ThaumonTrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
-        ).dynamicBounds(), BlockSetType.OAK));
+        ).dynamicBounds()));
 
         SILVERWOOD_FENCE = registerBlock("silverwood_fence", () -> new FenceBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid()));
 
-        SILVERWOOD_FENCE_GATE = registerBlock("silverwood_fence_gate", () -> new FenceGateBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid(), WoodType.OAK));
+        SILVERWOOD_FENCE_GATE = registerBlock("silverwood_fence_gate", () -> new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid()));
 
         SILVERWOOD_WINDOW = registerBlock("silverwood_window", () -> new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
@@ -450,7 +451,7 @@ public class ThaumonBlocks {
                 }
         ).requiresTool()));
 
-        ARCANE_STONE_WINDOW = registerBlock("arcane_stone_window", () -> new GlassBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
+        ARCANE_STONE_WINDOW = registerBlock("arcane_stone_window", () -> new ThaumonTransparentBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
@@ -504,7 +505,7 @@ public class ThaumonBlocks {
                 }
         ).requiresTool()));
 
-        ELDRITCH_STONE_WINDOW = registerBlock("eldritch_stone_window", () -> new GlassBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
+        ELDRITCH_STONE_WINDOW = registerBlock("eldritch_stone_window", () -> new ThaumonTransparentBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
@@ -528,7 +529,7 @@ public class ThaumonBlocks {
 
         CRACKED_ANCIENT_STONE_BRICKS = registerBlock("cracked_ancient_stone_bricks", () -> new Block(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 10.0F).requiresTool()));
 
-        ANCIENT_STONE_DOOR = registerBlock("ancient_stone_door", () -> new DoorBlock(AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.BASALT).strength(4.0F, 10.0F).requiresTool().dynamicBounds(), BlockSetType.STONE));
+        ANCIENT_STONE_DOOR = registerBlock("ancient_stone_door", () -> new ThaumonDoorBlock(BlockSetType.STONE, AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.BASALT).strength(4.0F, 10.0F).requiresTool().dynamicBounds()));
 
         POLISHED_ANCIENT_STONE = registerBlock("polished_ancient_stone", () -> new Block(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool()));
 
@@ -566,7 +567,7 @@ public class ThaumonBlocks {
                 }
         ).requiresTool()));
 
-        ANCIENT_STONE_WINDOW = registerBlock("ancient_stone_window", () -> new GlassBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
+        ANCIENT_STONE_WINDOW = registerBlock("ancient_stone_window", () -> new ThaumonTransparentBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).instrument(Instrument.HAT).sounds(BlockSoundGroup.GLASS).strength(0.5F).nonOpaque().solidBlock(
                 (state, view, pos) -> {
                     return false;
                 }
@@ -634,21 +635,21 @@ public class ThaumonBlocks {
                 }
         )));
 
-        GREATWOOD_BUTTON = registerBlock("greatwood_button", () -> new ButtonBlock(AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds(), BlockSetType.OAK, 30, true));
+        GREATWOOD_BUTTON = registerBlock("greatwood_button", () -> new ThaumonButtonBlock(BlockSetType.OAK, 30, AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds()));
 
-        SILVERWOOD_BUTTON = registerBlock("silverwood_button", () -> new ButtonBlock(AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds(), BlockSetType.OAK, 30, true));
+        SILVERWOOD_BUTTON = registerBlock("silverwood_button", () -> new ThaumonButtonBlock(BlockSetType.OAK, 30, AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds()));
 
-        ARCANE_STONE_BUTTON = registerBlock("arcane_stone_button", () -> new ButtonBlock(AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool().dynamicBounds(), BlockSetType.STONE, 20, false));
+        ARCANE_STONE_BUTTON = registerBlock("arcane_stone_button", () -> new ThaumonButtonBlock(BlockSetType.STONE, 20, AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool().dynamicBounds()));
 
-        ANCIENT_STONE_BUTTON = registerBlock("ancient_stone_button", () -> new ButtonBlock(AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool().dynamicBounds(), BlockSetType.STONE, 20, false));
+        ANCIENT_STONE_BUTTON = registerBlock("ancient_stone_button", () -> new ThaumonButtonBlock(BlockSetType.STONE, 20, AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool().dynamicBounds()));
 
-        GREATWOOD_PRESSURE_PLATE = registerBlock("greatwood_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid(), BlockSetType.OAK));
+        GREATWOOD_PRESSURE_PLATE = registerBlock("greatwood_pressure_plate", () -> new ThaumonPressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid()));
 
-        SILVERWOOD_PRESSURE_PLATE = registerBlock("silverwood_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid(), BlockSetType.OAK));
+        SILVERWOOD_PRESSURE_PLATE = registerBlock("silverwood_pressure_plate", () -> new ThaumonPressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.CHERRY_WOOD).strength(2.0F, 3.0F).dynamicBounds().solid()));
 
-        ARCANE_STONE_PRESSURE_PLATE = registerBlock("arcane_stone_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool().dynamicBounds().solid(), BlockSetType.IRON));
+        ARCANE_STONE_PRESSURE_PLATE = registerBlock("arcane_stone_pressure_plate", () -> new ThaumonPressurePlateBlock(BlockSetType.STONE, AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool().dynamicBounds().solid()));
 
-        ANCIENT_STONE_PRESSURE_PLATE = registerBlock("ancient_stone_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool().dynamicBounds().solid(), BlockSetType.IRON));
+        ANCIENT_STONE_PRESSURE_PLATE = registerBlock("ancient_stone_pressure_plate", () -> new ThaumonPressurePlateBlock(BlockSetType.STONE, AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).sounds(BlockSoundGroup.DEEPSLATE).strength(3.0F, 7.0F).requiresTool().dynamicBounds().solid()));
 
         GRIMOIRE = registerBlock("grimoire", () -> new GrimoireBlock(AbstractBlock.Settings.create().burnable().instrument(Instrument.BASS).sounds(BlockSoundGroup.NETHER_WOOD).strength(0.5F, 0.2F).noCollision().nonOpaque().pistonBehavior(PistonBehavior.DESTROY).solidBlock(
                 (state, view, pos) -> {

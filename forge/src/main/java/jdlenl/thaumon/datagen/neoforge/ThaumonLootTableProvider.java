@@ -1,4 +1,4 @@
-package jdlenl.thaumon.datagen.forge;
+package jdlenl.thaumon.datagen.neoforge;
 
 import net.minecraft.data.DataOutput;
 import net.minecraft.data.server.loottable.LootTableProvider;

@@ -2,9 +2,13 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
 }
 
+repositories {
+    maven { url "https://maven.neoforged.net/releases/" }
+}
+
 architectury {
     platformSetupLoomIde()
-    forge()
+    neoForge()
 }
 
 def generatedResources = file("src/generated")
@@ -17,11 +21,6 @@ sourceSets {
 
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
-
-    forge {
-        mixinConfig "thaumon-common.mixins.json"
-        mixinConfig "thaumon-forge.mixins.json"
-    }
 
     runs {
         data {
@@ -37,14 +36,14 @@ configurations {
     shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
-    developmentForge.extendsFrom common
+    developmentNeoForge.extendsFrom common
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:${rootProject.forge_version}"
+    neoForge "net.neoforged:neoforge:${rootProject.forge_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive = false }
 }
 
 processResources {

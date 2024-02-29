@@ -33,10 +33,6 @@
       "jdlenl.thaumon.datagen.fabric.DataGenerators"
     ]
   },
-  "mixins": [
-    "thaumon-fabric.mixins.json",
-    "thaumon-common.mixins.json"
-  ],
   "depends": {
     "fabric-api": "*",
     "minecraft": ">=1.20.1"

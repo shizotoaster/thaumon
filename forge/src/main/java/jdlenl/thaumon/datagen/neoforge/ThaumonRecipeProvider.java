@@ -1,20 +1,18 @@
-package jdlenl.thaumon.datagen.forge;
+package jdlenl.thaumon.datagen.neoforge;
 
 import jdlenl.thaumon.Thaumon;
 import jdlenl.thaumon.block.ThaumonBlocks;
 import jdlenl.thaumon.item.ThaumonItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.DataOutput;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-
-import java.util.function.Consumer;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 public class ThaumonRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ThaumonRecipeProvider(DataOutput output) {
@@ -22,7 +20,7 @@ public class ThaumonRecipeProvider extends RecipeProvider implements IConditionB
     }
 
     @Override
-    protected void generate(Consumer<RecipeJsonProvider> exporter) {
+    protected void generate(RecipeExporter exporter) {
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ThaumonItems.MUTAGEN.get(), Blocks.AMETHYST_BLOCK);
 
         // Amber

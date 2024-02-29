@@ -1,6 +1,6 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.4-SNAPSHOT" apply false
+    id "dev.architectury.loom" version "1.5-SNAPSHOT" apply false
 }
 
 architectury {
@@ -17,9 +17,7 @@ subprojects {
     dependencies {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
 
-        mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
-
-        modImplementation "maven.modrinth:thaumon:VAfXv3Zv"
+        mappings "net.fabricmc:yarn:1.20.4+build.3:v2"
     }
 }
 

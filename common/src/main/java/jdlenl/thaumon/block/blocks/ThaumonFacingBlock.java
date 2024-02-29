@@ -1,5 +1,6 @@
 package jdlenl.thaumon.block.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FacingBlock;
@@ -11,6 +12,11 @@ public class ThaumonFacingBlock extends FacingBlock {
     public ThaumonFacingBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.getStateManager().getDefaultState().with(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected MapCodec<? extends FacingBlock> getCodec() {
+        return null;
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

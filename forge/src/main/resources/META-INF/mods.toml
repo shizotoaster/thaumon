@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[1,)"
 issueTrackerURL = "https://github.com/shizotoaster/thaumon/issues"
 license = "MIT"
 
@@ -17,15 +17,13 @@ displayURL = "https://github.com/shizotoaster/thaumon"
 logoBlur = false
 
 [[dependencies.thaumon]]
-modId = "forge"
-mandatory = true
-versionRange = "[47,)"
+modId = "neoforge"
+versionRange = "[20.4,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.thaumon]]
 modId = "minecraft"
-mandatory = true
-versionRange = "[1.20.1, 1.20.2)"
+versionRange = "[1.20.4, 1.21)"
 ordering = "NONE"
 side = "BOTH"

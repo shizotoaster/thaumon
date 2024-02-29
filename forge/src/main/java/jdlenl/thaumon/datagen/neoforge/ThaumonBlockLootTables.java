@@ -1,11 +1,8 @@
-package jdlenl.thaumon.datagen.forge;
+package jdlenl.thaumon.datagen.neoforge;
 
 import jdlenl.thaumon.block.ThaumonBlocks;
-import jdlenl.thaumon.block.forge.ThaumonBlocksImpl;
-import net.minecraft.block.Block;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 
@@ -154,8 +151,8 @@ public class ThaumonBlockLootTables extends BlockLootTableGenerator {
         this.addDrop(ThaumonBlocks.RUNIC_ARCANE_TILES.get());
     }
 
-    @Override
+    /*@Override
     protected Iterable<Block> getKnownBlocks() {
-        return ThaumonBlocksImpl.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
-    }
+        return ThaumonBlocksImpl.BLOCKS.getEntries().stream().map(DeferredHolder::get)::iterator;
+    }*/
 }

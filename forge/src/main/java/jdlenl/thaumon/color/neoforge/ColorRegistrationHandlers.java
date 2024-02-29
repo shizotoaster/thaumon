@@ -1,4 +1,4 @@
-package jdlenl.thaumon.color.forge;
+package jdlenl.thaumon.color.neoforge;
 
 import jdlenl.thaumon.Thaumon;
 import net.minecraft.block.BlockState;
@@ -9,10 +9,10 @@ import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockRenderView;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import org.jetbrains.annotations.Nullable;
 
 import static jdlenl.thaumon.block.ThaumonBlocks.GREATWOOD_LEAVES;
