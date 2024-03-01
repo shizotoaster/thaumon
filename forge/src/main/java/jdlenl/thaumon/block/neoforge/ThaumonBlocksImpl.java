@@ -1,7 +1,10 @@
 package jdlenl.thaumon.block.neoforge;
 
 import jdlenl.thaumon.Thaumon;
+import jdlenl.thaumon.item.neoforge.ThaumonItemsImpl;
 import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -15,7 +18,7 @@ public class ThaumonBlocksImpl {
         //RegistryObject<T> object = BLOCKS.register(id, supplier);
         DeferredHolder<Block, T> object = BLOCKS.register(id, supplier);
         if (genItem) {
-            //ThaumonItemsImpl.ITEMS.register(id, () -> new BlockItem(object.get(), new Item.Settings()));
+            ThaumonItemsImpl.ITEMS.register(id, () -> new BlockItem(object.get(), new Item.Settings()));
         }
         return (DeferredHolder<Block, T>) object;
     }
