@@ -1,1 +1,5 @@
 accessWidener   v2  named
+
+accessible method net/minecraft/data/loot/BlockLootSubProvider dropSelf        (Lnet/minecraft/world/level/block/Block;)V
+accessible method net/minecraft/data/loot/BlockLootSubProvider add             (Lnet/minecraft/world/level/block/Block;Ljava/util/function/Function;)V
+accessible method net/minecraft/data/loot/BlockLootSubProvider createDoorTable (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
