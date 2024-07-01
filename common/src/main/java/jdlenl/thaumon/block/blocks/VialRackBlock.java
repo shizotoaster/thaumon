@@ -1,100 +1,100 @@
 package jdlenl.thaumon.block.blocks;
 
-import net.minecraft.block.*;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.WorldAccess;
-
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import java.util.List;
 
-public class VialRackBlock extends Block implements Waterloggable {
+public class VialRackBlock extends Block implements SimpleWaterloggedBlock {
     public static final DirectionProperty FACING;
     public static final BooleanProperty WATERLOGGED;
 
-    public VialRackBlock(AbstractBlock.Settings settings) {
+    public VialRackBlock(BlockBehaviour.Properties settings) {
         super(settings);
-        this.setDefaultState(this.getStateManager().getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, false));
+        this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
     }
 
-    public void appendTooltip(ItemStack itemstack, BlockView world, List<Text> list, TooltipContext flag) {
-        list.add(Text.translatable("tooltip.thaumon.canbeplaced"));
+    public void appendHoverText(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
+        list.add(Component.translatable("tooltip.thaumon.canbeplaced"));
     }
 
-    public boolean isTransparent(BlockState state, BlockView reader, BlockPos pos) {
+    public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
         return state.getFluidState().isEmpty();
     }
 
-    public int getOpacity(BlockState state, BlockView worldIn, BlockPos pos) {
+    public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
         return 0;
     }
 
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Vec3d offset = state.getModelOffset(world, pos);
-        VoxelShape shape;
-        switch (state.get(FACING)) {
-            case NORTH:
-                shape = VoxelShapes.union(createCuboidShape(10.0, 0.25, 7.0, 11.0, 3.25, 8.0), new VoxelShape[]{createCuboidShape(8.0, 0.25, 7.0, 9.0, 3.25, 8.0), createCuboidShape(5.5, 1.5, 6.5, 11.5, 2.5, 8.5), createCuboidShape(11.5, 0.0, 6.5, 12.5, 3.0, 8.5), createCuboidShape(4.5, 0.0, 6.5, 5.5, 3.0, 8.5), createCuboidShape(6.0, 0.25, 7.0, 7.0, 3.25, 8.0)});
-                break;
-            case EAST:
-                shape = VoxelShapes.union(createCuboidShape(8.0, 0.25, 10.0, 9.0, 3.25, 11.0), new VoxelShape[]{createCuboidShape(8.0, 0.25, 8.0, 9.0, 3.25, 9.0), createCuboidShape(7.5, 1.5, 5.5, 9.5, 2.5, 11.5), createCuboidShape(7.5, 0.0, 11.5, 9.5, 3.0, 12.5), createCuboidShape(7.5, 0.0, 4.5, 9.5, 3.0, 5.5), createCuboidShape(8.0, 0.25, 6.0, 9.0, 3.25, 7.0)});
-                break;
-            case WEST:
-                shape = VoxelShapes.union(createCuboidShape(7.0, 0.25, 5.0, 8.0, 3.25, 6.0), new VoxelShape[]{createCuboidShape(7.0, 0.25, 7.0, 8.0, 3.25, 8.0), createCuboidShape(6.5, 1.5, 4.5, 8.5, 2.5, 10.5), createCuboidShape(6.5, 0.0, 3.5, 8.5, 3.0, 4.5), createCuboidShape(6.5, 0.0, 10.5, 8.5, 3.0, 11.5), createCuboidShape(7.0, 0.25, 9.0, 8.0, 3.25, 10.0)});
-                break;
-            default:
-                shape = VoxelShapes.union(createCuboidShape(5.0, 0.25, 8.0, 6.0, 3.25, 9.0), new VoxelShape[]{createCuboidShape(7.0, 0.25, 8.0, 8.0, 3.25, 9.0), createCuboidShape(4.5, 1.5, 7.5, 10.5, 2.5, 9.5), createCuboidShape(3.5, 0.0, 7.5, 4.5, 3.0, 9.5), createCuboidShape(10.5, 0.0, 7.5, 11.5, 3.0, 9.5), createCuboidShape(9.0, 0.25, 8.0, 10.0, 3.25, 9.0)});
-        }
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        Vec3 offset = state.getOffset(world, pos);
+        VoxelShape shape = switch (state.getValue(FACING)) {
+            case NORTH ->
+                    Shapes.or(box(10.0, 0.25, 7.0, 11.0, 3.25, 8.0), box(8.0, 0.25, 7.0, 9.0, 3.25, 8.0), box(5.5, 1.5, 6.5, 11.5, 2.5, 8.5), box(11.5, 0.0, 6.5, 12.5, 3.0, 8.5), box(4.5, 0.0, 6.5, 5.5, 3.0, 8.5), box(6.0, 0.25, 7.0, 7.0, 3.25, 8.0));
+            case EAST ->
+                    Shapes.or(box(8.0, 0.25, 10.0, 9.0, 3.25, 11.0), box(8.0, 0.25, 8.0, 9.0, 3.25, 9.0), box(7.5, 1.5, 5.5, 9.5, 2.5, 11.5), box(7.5, 0.0, 11.5, 9.5, 3.0, 12.5), box(7.5, 0.0, 4.5, 9.5, 3.0, 5.5), box(8.0, 0.25, 6.0, 9.0, 3.25, 7.0));
+            case WEST ->
+                    Shapes.or(box(7.0, 0.25, 5.0, 8.0, 3.25, 6.0), box(7.0, 0.25, 7.0, 8.0, 3.25, 8.0), box(6.5, 1.5, 4.5, 8.5, 2.5, 10.5), box(6.5, 0.0, 3.5, 8.5, 3.0, 4.5), box(6.5, 0.0, 10.5, 8.5, 3.0, 11.5), box(7.0, 0.25, 9.0, 8.0, 3.25, 10.0));
+            default ->
+                    Shapes.or(box(5.0, 0.25, 8.0, 6.0, 3.25, 9.0), box(7.0, 0.25, 8.0, 8.0, 3.25, 9.0), box(4.5, 1.5, 7.5, 10.5, 2.5, 9.5), box(3.5, 0.0, 7.5, 4.5, 3.0, 9.5), box(10.5, 0.0, 7.5, 11.5, 3.0, 9.5), box(9.0, 0.25, 8.0, 10.0, 3.25, 9.0));
+        };
 
-        return shape.offset(offset.x, offset.y, offset.z);
+        return shape.move(offset.x, offset.y, offset.z);
     }
 
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, WATERLOGGED);
     }
 
-    public BlockState getPlacementState(ItemPlacementContext context) {
-        boolean isWater = context.getWorld().getFluidState(context.getBlockPos()).getFluid() == Fluids.WATER;
-        return this.getDefaultState().with(FACING, context.getHorizontalPlayerFacing().getOpposite()).with(WATERLOGGED, isWater);
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        boolean isWater = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(WATERLOGGED, isWater);
     }
 
-    public BlockState rotate(BlockState state, BlockRotation rot) {
-        return state.with(FACING, rot.rotate(state.get(FACING)));
+    public BlockState rotate(BlockState state, Rotation rot) {
+        return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
     }
 
-    public BlockState mirror(BlockState state, BlockMirror mirrorIn) {
-        return state.rotate(mirrorIn.getRotation(state.get(FACING)));
+    public BlockState mirror(BlockState state, Mirror mirrorIn) {
+        return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
     }
 
     public FluidState getFluidState(BlockState state) {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState facingState, WorldAccess world, BlockPos currentPos, BlockPos facingPos) {
-        if (state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor world, BlockPos currentPos, BlockPos facingPos) {
+        if (state.getValue(WATERLOGGED)) {
+            world.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
         }
 
-        return super.getStateForNeighborUpdate(state, facing, facingState, world, currentPos, facingPos);
+        return super.updateShape(state, facing, facingState, world, currentPos, facingPos);
     }
 
     static {
-        FACING = HorizontalFacingBlock.FACING;
-        WATERLOGGED = Properties.WATERLOGGED;
+        FACING = HorizontalDirectionalBlock.FACING;
+        WATERLOGGED = BlockStateProperties.WATERLOGGED;
     }
 }

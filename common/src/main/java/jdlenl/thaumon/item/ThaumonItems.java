@@ -2,16 +2,15 @@ package jdlenl.thaumon.item;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import jdlenl.thaumon.item.items.MutagenItem;
-import net.minecraft.item.Item;
-import net.minecraft.util.Rarity;
-
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import java.util.function.Supplier;
 
 public class ThaumonItems {
     public static Supplier<Item> MUTAGEN;
 
     public static void init() {
-        MUTAGEN = registerItem("mutagen", () -> new MutagenItem(new Item.Settings().maxCount(64).rarity(Rarity.EPIC)));
+        MUTAGEN = registerItem("mutagen", () -> new MutagenItem(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC)));
     }
 
     @ExpectPlatform
