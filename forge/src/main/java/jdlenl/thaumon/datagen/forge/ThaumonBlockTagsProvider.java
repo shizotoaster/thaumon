@@ -1,9 +1,11 @@
 package jdlenl.thaumon.datagen.forge;
 
-import jdlenl.thaumon.block.ThaumonBlocks;
-import net.minecraft.data.DataOutput;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
+import jdlenl.thaumon.datagen.ThaumonBlockTags;
+import jdlenl.thaumon.datagen.ThaumonBlockTagsAdder;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -11,314 +13,117 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ThaumonBlockTagsProvider extends BlockTagsProvider {
-    public ThaumonBlockTagsProvider(DataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> lookupProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
+    public ThaumonBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, modId, existingFileHelper);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup lookup) {
-        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
-                .add(ThaumonBlocks.GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.GREATWOOD_DOOR.get())
-                .add(ThaumonBlocks.GREATWOOD_BUTTON.get())
-                .add(ThaumonBlocks.GREATWOOD_FENCE.get())
-                .add(ThaumonBlocks.GREATWOOD_FENCE_GATE.get())
-                .add(ThaumonBlocks.GREATWOOD_GRIMOIRE_BOOKSHELF.get())
-                .add(ThaumonBlocks.GREATWOOD_LOG.get())
-                .add(ThaumonBlocks.GREATWOOD_LOG_POST.get())
-                .add(ThaumonBlocks.GREATWOOD_LOG_WALL.get())
-                .add(ThaumonBlocks.GREATWOOD_PLANKS.get())
-                .add(ThaumonBlocks.GREATWOOD_PRESSURE_PLATE.get())
-                .add(ThaumonBlocks.GREATWOOD_SLAB.get())
-                .add(ThaumonBlocks.GREATWOOD_STAIRS.get())
-                .add(ThaumonBlocks.GREATWOOD_TRAPDOOR.get())
-                .add(ThaumonBlocks.GREATWOOD_WOOD.get())
-                .add(ThaumonBlocks.GILDED_GREATWOOD_DOOR.get())
-                .add(ThaumonBlocks.ALCHEMISTS_GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.CLASSIC_GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.DUSTY_GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.EMPTY_GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.GILDED_GREATWOOD_TRAPDOOR.get())
+    protected void addTags(HolderLookup.Provider lookup) {
+        for (Block block : ThaumonBlockTagsAdder.MINEABLE_WITH_AXE) {
+            tag(BlockTags.MINEABLE_WITH_AXE).add(block.builtInRegistryHolder().key());
+        }
 
-                .add(ThaumonBlocks.SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.SILVERWOOD_BUTTON.get())
-                .add(ThaumonBlocks.SILVERWOOD_DOOR.get())
-                .add(ThaumonBlocks.SILVERWOOD_FENCE.get())
-                .add(ThaumonBlocks.SILVERWOOD_FENCE_GATE.get())
-                .add(ThaumonBlocks.SILVERWOOD_GRIMOIRE_BOOKSHELF.get())
-                .add(ThaumonBlocks.SILVERWOOD_LOG.get())
-                .add(ThaumonBlocks.SILVERWOOD_LOG_POST.get())
-                .add(ThaumonBlocks.SILVERWOOD_LOG_WALL.get())
-                .add(ThaumonBlocks.SILVERWOOD_PLANKS.get())
-                .add(ThaumonBlocks.SILVERWOOD_PRESSURE_PLATE.get())
-                .add(ThaumonBlocks.SILVERWOOD_SLAB.get())
-                .add(ThaumonBlocks.SILVERWOOD_STAIRS.get())
-                .add(ThaumonBlocks.SILVERWOOD_TRAPDOOR.get())
-                .add(ThaumonBlocks.SILVERWOOD_WOOD.get())
-                .add(ThaumonBlocks.ALCHEMISTS_SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.CLASSIC_SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.DUSTY_SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.EMPTY_SILVERWOOD_BOOKSHELF.get())
+        for (Block block : ThaumonBlockTagsAdder.SWORD_EFFICIENT) {
+            tag(BlockTags.SWORD_EFFICIENT).add(block.builtInRegistryHolder().key());
+        }
 
-                .add(ThaumonBlocks.GRIMOIRE.get())
-                .add(ThaumonBlocks.GRIMOIRE_STACK.get())
-                .add(ThaumonBlocks.VIAL_RACK.get());
+        for (Block block : ThaumonBlockTagsAdder.MINEABLE_WITH_PICKAXE) {
+            tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.SWORD_EFFICIENT)
-                .add(ThaumonBlocks.GREATWOOD_LEAVES.get())
-                .add(ThaumonBlocks.SILVERWOOD_LEAVES.get())
-                .add(ThaumonBlocks.SILVERWOOD_LEAF_POST.get())
-                .add(ThaumonBlocks.SILVERWOOD_LEAF_WALL.get());
+        for (Block block : ThaumonBlockTagsAdder.STONE_BUTTONS) {
+            tag(BlockTags.STONE_BUTTONS).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.BUTTONS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ThaumonBlocks.ANCIENT_STONE_WINDOW.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_WINDOW_PANE.get())
-                .add(ThaumonBlocks.ARCANE_STONE_WINDOW.get())
-                .add(ThaumonBlocks.ARCANE_STONE_WINDOW_PANE.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_WINDOW.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_WINDOW_PANE.get())
-                .add(ThaumonBlocks.GREATWOOD_WINDOW.get())
-                .add(ThaumonBlocks.GREATWOOD_WINDOW_PANE.get())
-                .add(ThaumonBlocks.SILVERWOOD_WINDOW.get())
-                .add(ThaumonBlocks.SILVERWOOD_WINDOW_PANE.get())
+        for (Block block : ThaumonBlockTagsAdder.WOODEN_BUTTONS) {
+            tag(BlockTags.WOODEN_BUTTONS).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.BUTTONS).add(block.builtInRegistryHolder().key());
+        }
 
-                .add(ThaumonBlocks.ARCANE_STONE.get())
-                .add(ThaumonBlocks.ARCANE_STONE_STAIRS.get())
-                .add(ThaumonBlocks.ARCANE_STONE_SlAB.get())
-                .add(ThaumonBlocks.ARCANE_STONE_WALL.get())
-                .add(ThaumonBlocks.ARCANE_STONE_BRICKS.get())
-                .add(ThaumonBlocks.ARCANE_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.ARCANE_BRICK_SLAB.get())
-                .add(ThaumonBlocks.ARCANE_BRICK_WALL.get())
-                .add(ThaumonBlocks.LARGE_ARCANE_STONE_BRICKS.get())
-                .add(ThaumonBlocks.LARGE_ARCANE_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.LARGE_ARCANE_BRICK_SLAB.get())
-                .add(ThaumonBlocks.LARGE_ARCANE_BRICK_WALL.get())
-                .add(ThaumonBlocks.ARCANE_STONE_TILES.get())
-                .add(ThaumonBlocks.ARCANE_TILE_STAIRS.get())
-                .add(ThaumonBlocks.ARCANE_TILE_SLAB.get())
-                .add(ThaumonBlocks.ARCANE_STONE_PILLAR.get())
-                .add(ThaumonBlocks.RUNIC_ARCANE_STONE.get())
-                .add(ThaumonBlocks.RUNIC_ARCANE_TILES.get())
-                .add(ThaumonBlocks.TILED_ARCANE_STONE.get())
-                .add(ThaumonBlocks.INLAID_ARCANE_STONE.get())
-                .add(ThaumonBlocks.ARCANE_LANTERN.get())
-                .add(ThaumonBlocks.ARCANE_STONE_WINDOW.get())
-                .add(ThaumonBlocks.ARCANE_STONE_WINDOW_PANE.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_STAIRS.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_SLAB.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_WALL.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_BRICKS.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_BRICK_SLAB.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_BRICK_WALL.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_TILES.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_TILE_STAIRS.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_TILE_SLAB.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_PILLAR.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_CAPSTONE.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_FACADE.get())
-                .add(ThaumonBlocks.CHISELED_ELDRITCH_STONE.get())
-                .add(ThaumonBlocks.CARVED_ELDRITCH_STONE.get())
-                .add(ThaumonBlocks.ENGRAVED_ELDRITCH_STONE.get())
-                .add(ThaumonBlocks.INLAID_ELDRITCH_STONE.get())
-                .add(ThaumonBlocks.ELDRITCH_LANTERN.get())
-                .add(ThaumonBlocks.ANCIENT_STONE.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_STAIRS.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_SLAB.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_WALL.get())
-                .add(ThaumonBlocks.POLISHED_ANCIENT_STONE.get())
-                .add(ThaumonBlocks.POLISHED_ANCIENT_STONE_STAIRS.get())
-                .add(ThaumonBlocks.POLISHED_ANCIENT_STONE_SLAB.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BRICKS.get())
-                .add(ThaumonBlocks.CRACKED_ANCIENT_STONE_BRICKS.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BRICK_SLAB.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BRICK_WALL.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_TILES.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_TILE_STAIRS.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_TILE_SLAB.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_DOOR.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_PILLAR.get())
-                .add(ThaumonBlocks.ENGRAVED_ANCIENT_STONE.get())
-                .add(ThaumonBlocks.CHISELED_ANCIENT_STONE.get())
-                .add(ThaumonBlocks.RUNIC_ANCIENT_STONE.get())
-                .add(ThaumonBlocks.TILED_ANCIENT_STONE.get())
-                .add(ThaumonBlocks.INLAID_ANCIENT_STONE.get())
-                .add(ThaumonBlocks.ANCIENT_LANTERN.get())
+        for (Block block : ThaumonBlockTagsAdder.WOODEN_DOORS) {
+            tag(BlockTags.WOODEN_DOORS).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.DOORS).add(block.builtInRegistryHolder().key());
+        }
 
-                .add(ThaumonBlocks.ARCANE_STONE_BUTTON.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BUTTON.get())
-                .add(ThaumonBlocks.ARCANE_STONE_PRESSURE_PLATE.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_PRESSURE_PLATE.get())
+        for (Block block : ThaumonBlockTagsAdder.NON_WOODEN_DOORS) {
+            tag(BlockTags.DOORS).add(block.builtInRegistryHolder().key());
+        }
 
-                .add(ThaumonBlocks.CRYSTAL_LAMP.get())
-                .add(ThaumonBlocks.CRYSTAL_STAND.get())
-                .add(ThaumonBlocks.RETORT.get());
+        for (Block block : ThaumonBlockTagsAdder.ENCHANTMENT_POWER_PROVIDER) {
+            tag(BlockTags.ENCHANTMENT_POWER_PROVIDER).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.STONE_BUTTONS)
-                .add(ThaumonBlocks.ANCIENT_STONE_BUTTON.get())
-                .add(ThaumonBlocks.ARCANE_STONE_BUTTON.get());
+        for (Block block : ThaumonBlockTagsAdder.FENCE_GATES) {
+            tag(BlockTags.FENCE_GATES).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
-                .add(ThaumonBlocks.SILVERWOOD_BUTTON.get())
-                .add(ThaumonBlocks.GREATWOOD_BUTTON.get());
+        for (Block block : ThaumonBlockTagsAdder.WOODEN_FENCES) {
+            tag(BlockTags.WOODEN_FENCES).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.FENCES).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.BUTTONS)
-                .add(ThaumonBlocks.ANCIENT_STONE_BUTTON.get())
-                .add(ThaumonBlocks.ARCANE_STONE_BUTTON.get())
-                .add(ThaumonBlocks.SILVERWOOD_BUTTON.get())
-                .add(ThaumonBlocks.GREATWOOD_BUTTON.get());
+        for (Block block : ThaumonBlockTagsAdder.LEAVES) {
+            tag(BlockTags.LEAVES).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
-                .add(ThaumonBlocks.SILVERWOOD_DOOR.get())
-                .add(ThaumonBlocks.GREATWOOD_DOOR.get())
-                .add(ThaumonBlocks.GILDED_GREATWOOD_DOOR.get());
+        for (Block block : ThaumonBlockTagsAdder.GREATWOOD_LOGS) {
+            tag(BlockTags.LOGS_THAT_BURN).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.LOGS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.DOORS)
-                .add(ThaumonBlocks.SILVERWOOD_DOOR.get())
-                .add(ThaumonBlocks.GREATWOOD_DOOR.get())
-                .add(ThaumonBlocks.GILDED_GREATWOOD_DOOR.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_DOOR.get());
+        for (Block block : ThaumonBlockTagsAdder.SILVERWOOD_LOGS) {
+            tag(BlockTags.LOGS_THAT_BURN).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.LOGS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
-                .add(ThaumonBlocks.ALCHEMISTS_GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.ALCHEMISTS_SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.DUSTY_GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.CLASSIC_SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.EMPTY_GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.SILVERWOOD_GRIMOIRE_BOOKSHELF.get())
-                .add(ThaumonBlocks.SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.CLASSIC_GREATWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.EMPTY_SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.DUSTY_SILVERWOOD_BOOKSHELF.get())
-                .add(ThaumonBlocks.GREATWOOD_GRIMOIRE_BOOKSHELF.get());
+        for (Block block : ThaumonBlockTagsAdder.WOODEN_SLABS) {
+            tag(BlockTags.WOODEN_SLABS).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.SLABS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(ThaumonBlocks.GREATWOOD_FENCE_GATE.get())
-                .add(ThaumonBlocks.SILVERWOOD_FENCE_GATE.get());
+        for (Block block : ThaumonBlockTagsAdder.NON_WOODEN_SLABS) {
+            tag(BlockTags.SLABS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
-                .add(ThaumonBlocks.GREATWOOD_FENCE.get())
-                .add(ThaumonBlocks.SILVERWOOD_FENCE.get());
+        for (Block block : ThaumonBlockTagsAdder.WOODEN_STAIRS) {
+            tag(BlockTags.WOODEN_STAIRS).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.STAIRS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.FENCES)
-                .add(ThaumonBlocks.GREATWOOD_FENCE.get())
-                .add(ThaumonBlocks.SILVERWOOD_FENCE.get());
+        for (Block block : ThaumonBlockTagsAdder.NON_WOODEN_STAIRS) {
+            tag(BlockTags.STAIRS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.LEAVES)
-                .add(ThaumonBlocks.SILVERWOOD_LEAF_WALL.get())
-                .add(ThaumonBlocks.GREATWOOD_LEAVES.get())
-                .add(ThaumonBlocks.SILVERWOOD_LEAVES.get())
-                .add(ThaumonBlocks.SILVERWOOD_LEAF_POST.get());
+        for (Block block : ThaumonBlockTagsAdder.WOODEN_TRAPDOORS) {
+            tag(BlockTags.WOODEN_TRAPDOORS).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.TRAPDOORS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
-                .add(ThaumonBlocks.GREATWOOD_LOG.get())
-                .add(ThaumonBlocks.SILVERWOOD_LOG.get());
+        for (Block block : ThaumonBlockTagsAdder.WALLS) {
+            tag(BlockTags.WALLS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.LOGS)
-                .add(ThaumonBlocks.GREATWOOD_LOG.get())
-                .add(ThaumonBlocks.SILVERWOOD_LOG.get());
+        for (Block block : ThaumonBlockTagsAdder.WOODEN_PRESSURE_PLATES) {
+            tag(BlockTags.WOODEN_PRESSURE_PLATES).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.PRESSURE_PLATES).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
-                .add(ThaumonBlocks.GREATWOOD_SLAB.get())
-                .add(ThaumonBlocks.SILVERWOOD_SLAB.get());
+        for (Block block : ThaumonBlockTagsAdder.STONE_PRESSURE_PLATES) {
+            tag(BlockTags.STONE_PRESSURE_PLATES).add(block.builtInRegistryHolder().key());
+            tag(BlockTags.PRESSURE_PLATES).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.SLABS)
-                .add(ThaumonBlocks.GREATWOOD_SLAB.get())
-                .add(ThaumonBlocks.SILVERWOOD_SLAB.get())
-                .add(ThaumonBlocks.ARCANE_STONE_SlAB.get())
-                .add(ThaumonBlocks.POLISHED_ANCIENT_STONE_SLAB.get())
-                .add(ThaumonBlocks.LARGE_ARCANE_BRICK_SLAB.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_TILE_SLAB.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_TILE_SLAB.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_SLAB.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BRICK_SLAB.get())
-                .add(ThaumonBlocks.AMBER_BRICK_SLAB.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_SLAB.get())
-                .add(ThaumonBlocks.ARCANE_BRICK_SLAB.get())
-                .add(ThaumonBlocks.ARCANE_TILE_SLAB.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_BRICK_SLAB.get())
-                .add(ThaumonBlocks.ARCANE_TILE_SLAB.get())
-                .add(ThaumonBlocks.AMBER_SLAB.get());
+        for (Block block : ThaumonBlockTagsAdder.PLANKS) {
+            tag(BlockTags.PLANKS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
-                .add(ThaumonBlocks.GREATWOOD_STAIRS.get())
-                .add(ThaumonBlocks.SILVERWOOD_STAIRS.get());
+        for (Block block : ThaumonBlockTagsAdder.GREATWOOD_LOGS) {
+            tag(ThaumonBlockTags.GREATWOOD_LOGS).add(block.builtInRegistryHolder().key());
+        }
 
-        getOrCreateTagBuilder(BlockTags.STAIRS)
-                .add(ThaumonBlocks.GREATWOOD_STAIRS.get())
-                .add(ThaumonBlocks.SILVERWOOD_STAIRS.get())
-                .add(ThaumonBlocks.ARCANE_STONE_STAIRS.get())
-                .add(ThaumonBlocks.POLISHED_ANCIENT_STONE_STAIRS.get())
-                .add(ThaumonBlocks.LARGE_ARCANE_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_TILE_STAIRS.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_TILE_STAIRS.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_STAIRS.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.AMBER_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_STAIRS.get())
-                .add(ThaumonBlocks.ARCANE_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.ARCANE_TILE_STAIRS.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_BRICK_STAIRS.get())
-                .add(ThaumonBlocks.ARCANE_TILE_STAIRS.get())
-                .add(ThaumonBlocks.AMBER_STAIRS.get());
-
-        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
-                .add(ThaumonBlocks.GREATWOOD_BUTTON.get())
-                .add(ThaumonBlocks.SILVERWOOD_BUTTON.get());
-
-        getOrCreateTagBuilder(BlockTags.STONE_BUTTONS)
-                .add(ThaumonBlocks.ANCIENT_STONE_BUTTON.get())
-                .add(ThaumonBlocks.ARCANE_STONE_BUTTON.get());
-
-        getOrCreateTagBuilder(BlockTags.BUTTONS)
-                .add(ThaumonBlocks.GREATWOOD_BUTTON.get())
-                .add(ThaumonBlocks.SILVERWOOD_BUTTON.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BUTTON.get())
-                .add(ThaumonBlocks.ARCANE_STONE_BUTTON.get());
-
-        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
-                .add(ThaumonBlocks.GILDED_GREATWOOD_TRAPDOOR.get())
-                .add(ThaumonBlocks.SILVERWOOD_TRAPDOOR.get())
-                .add(ThaumonBlocks.GREATWOOD_TRAPDOOR.get());
-
-        getOrCreateTagBuilder(BlockTags.TRAPDOORS)
-                .add(ThaumonBlocks.GILDED_GREATWOOD_TRAPDOOR.get())
-                .add(ThaumonBlocks.SILVERWOOD_TRAPDOOR.get())
-                .add(ThaumonBlocks.GREATWOOD_TRAPDOOR.get());
-
-        getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ThaumonBlocks.ARCANE_STONE_WALL.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_BRICK_WALL.get())
-                .add(ThaumonBlocks.LARGE_ARCANE_BRICK_WALL.get())
-                .add(ThaumonBlocks.GREATWOOD_LOG_WALL.get())
-                .add(ThaumonBlocks.ARCANE_BRICK_WALL.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_WALL.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_WALL.get())
-                .add(ThaumonBlocks.SILVERWOOD_LEAF_WALL.get())
-                .add(ThaumonBlocks.SILVERWOOD_LOG_WALL.get())
-                .add(ThaumonBlocks.ELDRITCH_STONE_BRICK_WALL.get());
-
-        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(ThaumonBlocks.GREATWOOD_PRESSURE_PLATE.get())
-                .add(ThaumonBlocks.SILVERWOOD_PRESSURE_PLATE.get());
-
-        getOrCreateTagBuilder(BlockTags.STONE_PRESSURE_PLATES)
-                .add(ThaumonBlocks.ANCIENT_STONE_PRESSURE_PLATE.get())
-                .add(ThaumonBlocks.ARCANE_STONE_PRESSURE_PLATE.get());
-
-        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
-                .add(ThaumonBlocks.GREATWOOD_PRESSURE_PLATE.get())
-                .add(ThaumonBlocks.SILVERWOOD_PRESSURE_PLATE.get())
-                .add(ThaumonBlocks.ANCIENT_STONE_PRESSURE_PLATE.get())
-                .add(ThaumonBlocks.ARCANE_STONE_PRESSURE_PLATE.get());
-
-        getOrCreateTagBuilder(BlockTags.PLANKS)
-                .add(ThaumonBlocks.GREATWOOD_PLANKS.get())
-                .add(ThaumonBlocks.SILVERWOOD_PLANKS.get());
-
+        for (Block block : ThaumonBlockTagsAdder.SILVERWOOD_LOGS) {
+            tag(ThaumonBlockTags.SILVERWOOD_LOGS).add(block.builtInRegistryHolder().key());
+        }
     }
 }

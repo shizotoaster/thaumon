@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "thaumon",
   "version": "${version}",
-  "name": "Thaumon [BETA]",
+  "name": "Thaumon",
   "description": "Thaumcraft-inspired decoration blocks for modern Minecraft",
   "authors": [
     "jdlenl",

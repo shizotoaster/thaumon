@@ -1,16 +1,15 @@
 package jdlenl.thaumon.datagen.forge;
 
-import net.minecraft.data.DataOutput;
-import net.minecraft.data.server.loottable.LootTableProvider;
-import net.minecraft.loot.context.LootContextTypes;
-
 import java.util.List;
 import java.util.Set;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
 public class ThaumonLootTableProvider {
-    public static LootTableProvider create(DataOutput output) {
+    public static LootTableProvider create(PackOutput output) {
         return new LootTableProvider(output, Set.of(), List.of(
-                new LootTableProvider.LootTypeGenerator(ThaumonBlockLootTables::new, LootContextTypes.BLOCK)
+                new LootTableProvider.SubProviderEntry(ThaumonBlockLootTablesProvider::new, LootContextParamSets.BLOCK)
         ));
     }
 }
