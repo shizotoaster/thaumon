@@ -3,19 +3,19 @@ package jdlenl.thaumon.client.fabric;
 import jdlenl.thaumon.color.fabric.ColorProviderRegistries;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.renderer.RenderType;
 
 import static jdlenl.thaumon.block.ThaumonBlocks.*;
 
 public class ThaumonClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.translucent(),
                 AMBERGLASS.get(),
                 AMBERGLASS_PANE.get()
         );
 
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
                 GREATWOOD_WINDOW.get(),
                 GREATWOOD_WINDOW_PANE.get(),
                 SILVERWOOD_WINDOW.get(),
