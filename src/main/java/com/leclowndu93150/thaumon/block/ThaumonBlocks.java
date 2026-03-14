@@ -169,7 +169,7 @@ public class ThaumonBlocks {
     public static final RegistryObject<Block> INLAID_ARCANE_STONE = registerBlock("inlaid_arcane_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> ARCANE_LANTERN = registerBlock("arcane_lantern",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).sound(SoundType.LANTERN).lightLevel(s -> 15)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).sound(SoundType.LANTERN).lightLevel(s -> 15)));
     public static final RegistryObject<Block> ARCANE_STONE_WINDOW = registerBlock("arcane_stone_window",
             () -> new ThaumonGlassBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(0.5F).sound(SoundType.GLASS).noOcclusion()));
     public static final RegistryObject<Block> ARCANE_STONE_WINDOW_PANE = registerBlock("arcane_stone_window_pane",
@@ -213,7 +213,7 @@ public class ThaumonBlocks {
     public static final RegistryObject<Block> INLAID_ELDRITCH_STONE = registerBlock("inlaid_eldritch_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(50.0F, 1200.0F).sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> ELDRITCH_LANTERN = registerBlock("eldritch_lantern",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(50.0F, 1200.0F).sound(SoundType.LANTERN).lightLevel(s -> 15)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(50.0F, 1200.0F).sound(SoundType.LANTERN).lightLevel(s -> 15)));
     public static final RegistryObject<Block> ELDRITCH_STONE_WINDOW = registerBlock("eldritch_stone_window",
             () -> new ThaumonGlassBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(0.5F).sound(SoundType.GLASS).noOcclusion()));
     public static final RegistryObject<Block> ELDRITCH_STONE_WINDOW_PANE = registerBlock("eldritch_stone_window_pane",
@@ -265,7 +265,7 @@ public class ThaumonBlocks {
     public static final RegistryObject<Block> INLAID_ANCIENT_STONE = registerBlock("inlaid_ancient_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> ANCIENT_LANTERN = registerBlock("ancient_lantern",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).sound(SoundType.LANTERN).lightLevel(s -> 15)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).sound(SoundType.LANTERN).lightLevel(s -> 15)));
     public static final RegistryObject<Block> ANCIENT_STONE_WINDOW = registerBlock("ancient_stone_window",
             () -> new ThaumonGlassBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(0.5F).sound(SoundType.GLASS).noOcclusion()));
     public static final RegistryObject<Block> ANCIENT_STONE_WINDOW_PANE = registerBlock("ancient_stone_window_pane",
