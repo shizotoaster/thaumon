@@ -10,3 +10,6 @@ out/
 classes/
 logs/
 src/generated/
+gradle/wrapper
+gradlew
+gradlew.bat

@@ -1,5 +1,5 @@
 {
-  "parent": "block/door_bottom_right",
+  "parent": "block/door_bottom_rh",
   "textures": {
     "bottom": "thaumon:block/silverwood_door_bottom",
     "top": "thaumon:block/silverwood_door_top"
