@@ -13,3 +13,5 @@ src/generated/
 gradle/wrapper
 gradlew
 gradlew.bat
+*.mcfunction
+src/main/java/com/leclowndu93150/thaumon/command/
